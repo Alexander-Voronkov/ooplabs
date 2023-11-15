@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,8 +54,56 @@ namespace OOPLR3
         public MobilePhone(double width = 0, double height = 0, double weight = 0, string name = "Мобільний телефон")
             : base(width, height, weight, name)
         {
-
         }
+        public override string Volume()
+        {
+            return "Volume mobile telephone";
+        }
+
+        public override string Info()
+        {
+            return $"Телефон {Name}, із шириною {Width}, висотою {Height}, вагою {Weight}, та номером {Nomer}";
+        }
+    }
+
+    internal sealed class SmartPhone : Telephone
+    {
+        private double a, b, alfa;
+        public SmartPhone(double a, double b, double alfa, double width = 0, double height = 0, double weight = 0, string name = "Мобільний телефон")
+           : base(width, height, weight, name)
+        {
+            A = a;
+            B = b;
+            Alfa = alfa;
+        }
+
+        public double A
+        {
+            get { return a; }
+            set { if (value >=0) a = value; }
+        }
+
+        public double B
+        {
+            get { return b; }
+            set { if (value >= 0) b = value; }
+        }
+
+        public double Alfa
+        {
+            get { return alfa; }
+            set
+            {
+                if(value >= 0)
+                    alfa = value;  
+            }
+        }
+
+        public Telephone this[int i]
+        {
+            get { return (i%2 == 0 ? new HomeTelephone() : new MobilePhone()); }
+        }
+
         public override string Volume()
         {
             return "Volume mobile telephone";

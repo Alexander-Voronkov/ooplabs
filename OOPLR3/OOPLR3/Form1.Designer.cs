@@ -39,13 +39,14 @@
             button9 = new Button();
             button10 = new Button();
             button11 = new Button();
+            button12 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(439, 471);
+            button1.Location = new Point(340, 471);
             button1.Name = "button1";
-            button1.Size = new Size(417, 90);
+            button1.Size = new Size(264, 90);
             button1.TabIndex = 0;
             button1.Text = "Поточна кількість об'єктів";
             button1.UseVisualStyleBackColor = true;
@@ -53,9 +54,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(439, 589);
+            button2.Location = new Point(340, 571);
             button2.Name = "button2";
-            button2.Size = new Size(417, 83);
+            button2.Size = new Size(264, 101);
             button2.TabIndex = 1;
             button2.Text = "Завершити роботу";
             button2.UseVisualStyleBackColor = true;
@@ -151,11 +152,22 @@
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
             // 
+            // button12
+            // 
+            button12.Location = new Point(622, 471);
+            button12.Name = "button12";
+            button12.Size = new Size(290, 197);
+            button12.TabIndex = 11;
+            button12.Text = "Створити новий телефон за допомогою індексатора";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1288, 684);
+            Controls.Add(button12);
             Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button9);
@@ -185,5 +197,6 @@
         private Button button9;
         private Button button10;
         private Button button11;
+        private Button button12;
     }
 }

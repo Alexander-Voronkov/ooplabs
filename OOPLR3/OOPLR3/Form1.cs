@@ -113,5 +113,10 @@ namespace OOPLR3
             t = ht;
             MessageBox.Show(t.Info());
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(((new SmartPhone(1,2,3))[new Random().Next()]).Info());
+        }
     }
 }
