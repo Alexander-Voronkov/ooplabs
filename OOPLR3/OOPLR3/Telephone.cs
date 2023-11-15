@@ -28,6 +28,21 @@ namespace OOPLR3
         public abstract string Info();
 
         public abstract string Volume();
+
+        public static bool operator==(Telephone t1, Telephone t2)
+        {
+            return t1.Name == t2.Name;
+        }
+
+        public static bool operator !=(Telephone t1, Telephone t2)
+        {
+            return !(t1==t2);
+        }
+
+        public static Telephone operator!(Telephone t1)
+        {
+            return new MobilePhone(name: new string(t1.Name.Reverse().ToArray()));
+        }
     }
 
     internal sealed class HomeTelephone : Telephone

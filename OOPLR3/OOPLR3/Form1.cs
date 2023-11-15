@@ -116,7 +116,22 @@ namespace OOPLR3
 
         private void button12_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(((new SmartPhone(1,2,3))[new Random().Next()]).Info());
+            MessageBox.Show(((new SmartPhone(1, 2, 3))[new Random().Next()]).Info());
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Telephone phone1 = new MobilePhone();
+            Telephone phone2 = new HomeTelephone();
+
+            MessageBox.Show(phone1.Info() + " == " + phone2.Info() + " = " + (phone1 == phone2).ToString());
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Telephone phone1 = new MobilePhone();
+
+            MessageBox.Show(phone1.Info() + " та такий самий телефон із оператором ! " + (!phone1).Info());
         }
     }
 }
