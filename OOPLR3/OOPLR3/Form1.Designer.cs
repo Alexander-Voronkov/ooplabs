@@ -35,6 +35,10 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -103,15 +107,59 @@
             button7.Name = "button7";
             button7.Size = new Size(280, 143);
             button7.TabIndex = 6;
-            button7.Text = "Телефон за замовчуванням";
+            button7.Text = "Використання абстрактного класу";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(527, 193);
+            button8.Name = "button8";
+            button8.Size = new Size(214, 121);
+            button8.TabIndex = 7;
+            button8.Text = "Створити нову кнопку";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(527, 328);
+            button9.Name = "button9";
+            button9.Size = new Size(230, 137);
+            button9.TabIndex = 8;
+            button9.Text = "Перемістити елементи вліво";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(70, 506);
+            button10.Name = "button10";
+            button10.Size = new Size(220, 117);
+            button10.TabIndex = 9;
+            button10.Text = "Збільшити всі елементи";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(934, 506);
+            button11.Name = "button11";
+            button11.Size = new Size(297, 162);
+            button11.TabIndex = 10;
+            button11.Text = "По іншому використовувати абстрактні класи";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1288, 684);
+            Controls.Add(button11);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -133,5 +181,9 @@
         private Button button5;
         private Button button6;
         private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button button10;
+        private Button button11;
     }
 }

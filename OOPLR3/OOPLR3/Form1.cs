@@ -31,7 +31,12 @@ namespace OOPLR3
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(new Telephone().Info());
+            MobilePhone mp = new();
+            HomeTelephone ht = new();
+            Telephone t = mp;
+            MessageBox.Show(t.Volume());
+            t = ht;
+            MessageBox.Show(t.Volume());
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -66,6 +71,47 @@ namespace OOPLR3
             {
                 MessageBox.Show("Помилка");
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Button a = new();
+            Random r = new();
+            a.Width = 200;
+            a.Height = 200;
+            a.Left = r.Next(500);
+            a.Top = r.Next(400);
+            a.Text = ((Button)sender).Text;
+            a.Parent = this;
+            a.Show();
+            a.Click += new System.EventHandler(this.button8_Click);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.Left -= 60;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.Width += 20;
+                item.Height += 20;
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            MobilePhone mp = new();
+            HomeTelephone ht = new();
+            Telephone t = mp;
+            MessageBox.Show(t.Info());
+            t = ht;
+            MessageBox.Show(t.Info());
         }
     }
 }

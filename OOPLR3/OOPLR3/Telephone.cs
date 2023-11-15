@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPLR3
 {
-    internal class Telephone
+    internal abstract class Telephone
     {
         public double Width { get; set; }
         public double Height { get; set; }
@@ -24,10 +24,9 @@ namespace OOPLR3
             Name = name;
         }
 
-        public string Info()
-        {
-            return $"Телефон {Name}, із шириною {Width}, висотою {Height}, вагою {Weight}, та номером {Nomer}";
-        }
+        public abstract string Info();
+
+        public abstract string Volume();
     }
 
     internal sealed class HomeTelephone : Telephone
@@ -35,7 +34,17 @@ namespace OOPLR3
         public HomeTelephone(double width = 0, double height = 0, double weight = 0, string name = "Стаціонарний телефон") 
             : base(width, height, weight, name)
         {
+            
+        }
 
+        public override string Volume()
+        {
+            return "Volume home telephone";
+        }
+
+        public override string Info()
+        {
+            return $"Телефон {Name}, із шириною {Width}, висотою {Height}, вагою {Weight}, та номером {Nomer}";
         }
     }
 
@@ -45,6 +54,15 @@ namespace OOPLR3
             : base(width, height, weight, name)
         {
 
+        }
+        public override string Volume()
+        {
+            return "Volume mobile telephone";
+        }
+
+        public override string Info()
+        {
+            return $"Телефон {Name}, із шириною {Width}, висотою {Height}, вагою {Weight}, та номером {Nomer}";
         }
     }
 }
